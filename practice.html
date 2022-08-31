@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+
+    <script>
+
+        let myArray = [
+            {
+                id: 1,
+                name: "John",
+                age: 30,
+                city: "New York",
+                index: 0
+            },
+            {
+                id: 2,
+                name: "Mary",
+                age: 25,
+                city: "Paris",
+                index: 1
+            },
+            {
+                id: 3,
+                name: "Mike",
+                age: 27,
+                city: "London",
+                index: 2
+            },
+            {
+                id: 4,
+                name: "Adam",
+                age: 29,
+                city: "Tokyo",
+                index: 3
+            },
+            {
+                id: 5,
+                name: "Peter",
+                age: 28,
+                city: "New York",
+                index: 4
+            }
+        ];
+
+        const test = { id: 99, name: "test", age: 30, city: "New York" }
+        test["index"] = 3;
+
+        const test2 = { id: 55, name: "test2", age: 43, city: "Mozambique" }
+
+        test2["index"] = 4;
+
+        for (let i = 0; i < myArray.length; i++) {
+            const element = myArray[i];
+            console.log("element", element);
+        }
+
+        myArray.splice(3, 0, test);
+        myArray.splice(4, 0, test2);
+
+        console.log("pushed new object", myArray);
+
+        for (let i = 0; i < myArray.length; i++) {
+
+            // const element = myArray[i];
+            // let updatedIndex = element.index;
+            // updatedIndex = i;
+            // element.index = updatedIndex;
+            myArray[i].index = i;
+        }
+
+        console.log("updated index", myArray);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
