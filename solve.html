@@ -55,12 +55,12 @@
 
         test2["index"] = 2;
 
-        myArray.splice(3, 0, test);
+        myArray.splice(2, 0, test);
         myArray.splice(2, 0, test2);
 
         // console.log("pushed new object", myArray);
 
-        for (let i = 3; i < myArray.length; i++) {
+        for (let i = 2; i < myArray.length; i++) {
             myArray[i].index = i;
         }
 

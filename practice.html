@@ -6,86 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .div_main_wrapper {
+            height: 180px;
+            width: 400px;
+            border: 2px solid salmon;
+            margin: 0 auto;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="div_main_wrapper">
+        <form>
+            1st Number : <input type="text" id="firstNumber" /><br>
+            2nd Number: <input type="text" id="secondNumber" /><br>
+            <input id="multiply" type="button" Value="Multiply" />
+            <input id="divide" type="button" Value="Divide" />
+        </form>
+        <p>The Result is : <br>
+            <span id="result"></span>
+        </p>
+    </div>
+
+
 
     <script>
-
-        let myArray = [
-            {
-                id: 1,
-                name: "John",
-                age: 30,
-                city: "New York",
-                index: 0
-            },
-            {
-                id: 2,
-                name: "Mary",
-                age: 25,
-                city: "Paris",
-                index: 1
-            },
-            {
-                id: 3,
-                name: "Mike",
-                age: 27,
-                city: "London",
-                index: 2
-            },
-            {
-                id: 4,
-                name: "Adam",
-                age: 29,
-                city: "Tokyo",
-                index: 3
-            },
-            {
-                id: 5,
-                name: "Peter",
-                age: 28,
-                city: "New York",
-                index: 4
-            }
-        ];
-
-        const test = { id: 99, name: "test", age: 30, city: "New York" }
-        test["index"] = 3;
-
-        const test2 = { id: 55, name: "test2", age: 43, city: "Mozambique" }
-
-        test2["index"] = 4;
-
-        for (let i = 0; i < myArray.length; i++) {
-            const element = myArray[i];
-            console.log("element", element);
-        }
-
-        myArray.splice(3, 0, test);
-        myArray.splice(4, 0, test2);
-
-        console.log("pushed new object", myArray);
-
-        for (let i = 0; i < myArray.length; i++) {
-
-            // const element = myArray[i];
-            // let updatedIndex = element.index;
-            // updatedIndex = i;
-            // element.index = updatedIndex;
-            myArray[i].index = i;
-        }
-
-        console.log("updated index", myArray);
+        document.getElementById("multiply").addEventListener("click", function () {
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            document.getElementById("result").innerHTML = num1 * num2;
+        })
 
 
-
-
-
+        /*  function divideBy() {
+             num1 = document.getElementById("firstNumber").value;
+             num2 = document.getElementById("secondNumber").value;
+             document.getElementById("result").innerHTML = num1 / num2;
+         } */
+        document.getElementById("divide").addEventListener("click", function () {
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            document.getElementById("result").innerHTML = num1 / num2;
+        });
 
 
 
     </script>
+
+    <script src="./test.js"></script>
+
 </body>
 
 </html>
